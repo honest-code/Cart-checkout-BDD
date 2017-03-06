@@ -1,6 +1,7 @@
 version
 
 *.csv
+tests_result.json
 
 #################
 ## Eclipse

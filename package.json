@@ -29,6 +29,7 @@
     "grunt-mocha-cli": "1.12.0",
     "grunt-contrib-jshint": "0.12.0",
     "grunt-exec": "0.4.6",
+    "honestcode": "^1.0.10",
     "load-grunt-tasks": "0.6.0",
     "proxyquire": "1.7.10"
   },
@@ -40,6 +41,12 @@
     "start": "node --harmony src/index.js",
     "test": "grunt mochacli",
     "jshint": "grunt jshint",
-    "cucumber": "node --harmony node_modules/.bin/cucumber-js acceptance-tests/features -r acceptance-tests/lib/step-definitions -t ~@Pending -f pretty"
+    "cucumber": "node --harmony node_modules/.bin/cucumber-js acceptance-tests/features -r acceptance-tests/lib/step-definitions -t ~@Pending -f pretty",
+    "test-acceptance": "node --harmony node_modules/.bin/cucumber-js acceptance-tests/features -r acceptance-tests/lib/step-definitions -f pretty",
+    "test-acceptance-only": "node --harmony node_modules/.bin/cucumber-js acceptance-tests/features -r acceptance-tests/lib/step-definitions --tags @only -f pretty",
+    "test-acceptance-win": "node_modules/.bin/cucumber-js test-hc/acceptance/features -r test-hc/acceptance/step-definitions -f pretty",
+    "test-acceptance-win-only": "node_modules/.bin/cucumber-js acceptance-tests/features -r acceptance-tests/lib/step-definitions --tags @only -f pretty",
+    "test-acceptance-file": "./node_modules/.bin/cucumber-js ./test-hc/acceptance/features -r ./acceptance-tests/lib/step-definitions --format json:tests_result.json",
+    "honestcode": "honestcode B1lxfmacqgBJezQa5qxBJzlG ./tests_result.json"
   }
 }
