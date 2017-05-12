@@ -11,6 +11,6 @@ Feature: Create new checkout
         Then the checkout with the code "1" will be returned
         And the checkout total will be "0 EUR"
 
-    Scenario: Retrieve an non existing checkout
+    Scenario: Retrieve a non existing checkout
         When a supermarket clerk queries the checkout "2" current state
         Then the checkout won't be found

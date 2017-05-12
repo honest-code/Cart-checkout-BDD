@@ -29,13 +29,33 @@ npm start
 
 ```
 
-From a different Terminal window run the Acceptance tests:
+From a different Terminal window run the Acceptance tests (for Unix or Windows):
 
 ```
 
-npm run cucumber
+npm run test-acceptance
+npm run test-acceptance-win
 
 ```
+
+
+To generate the Acceptance test results (for Unix or Windows):
+
+```
+
+npm run test-acceptance-file
+npm run test-acceptance-win-file
+
+```
+
+After generating tests-result.json file, update your Blueprint WEBHOOK_API_KEY in package.json and send the results to pro.HonestCode.io:
+
+```
+npm run honestcode
+
+```
+
+
 
 To run the Unit tests:
 

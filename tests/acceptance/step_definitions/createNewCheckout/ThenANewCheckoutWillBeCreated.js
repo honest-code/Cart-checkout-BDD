@@ -1,6 +1,6 @@
 'use strict';
 
-const moneyStringToObject = require('../../money/moneyStringToObject');
+const moneyStringToObject = require('../../lib/money/moneyStringToObject');
 require('chai').should();
 
 module.exports = function () {

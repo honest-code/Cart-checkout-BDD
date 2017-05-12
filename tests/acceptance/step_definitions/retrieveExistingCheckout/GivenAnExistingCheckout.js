@@ -1,6 +1,6 @@
 'use strict';
 
-const createCheckout = require('../../service/createCheckout');
+const createCheckout = require('../../lib/service/createCheckout');
 
 module.exports = function () {
 
