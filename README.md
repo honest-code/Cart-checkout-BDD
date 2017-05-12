@@ -1,13 +1,13 @@
 # Cart - Checkout
 
-## Objetivos
+## Objetives
 
-Los objetivo de este dojo son los siguientes:
+A simple app with Acceptance tests to learn BDD and ATDD and connect with the service pro.HonestCode.io
 
 
 ## System requisites
 
-We need <n updated version of Node. It can be downloaded at: https://nodejs.org/en
+Node is required. It can be downloaded at: https://nodejs.org/en
 
 * NodeJS: ~4.4.5
 * NPM: ~2.15.5
@@ -29,7 +29,7 @@ npm start
 
 ```
 
-From a different Terminal window run the Acceptance tests (for Unix or Windows):
+After startin the server and from a different Terminal window run the Acceptance tests (for Unix or Windows):
 
 ```
 
@@ -39,7 +39,7 @@ npm run test-acceptance-win
 ```
 
 
-To generate the Acceptance test results (for Unix or Windows):
+Generate the Acceptance test results report (for Unix or Windows):
 
 ```
 
@@ -54,7 +54,6 @@ After generating tests-result.json file, update your Blueprint WEBHOOK_API_KEY i
 npm run honestcode
 
 ```
-
 
 
 To run the Unit tests:

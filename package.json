@@ -1,18 +1,18 @@
 {
-  "name": "cart-checkout",
+  "name": "cart-checkout-BDD",
   "version": "1.0.0",
   "description": "Cart checkout BDD / ATDD demo",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rai22474/dojoAtdd.git"
+    "url": "git+https://github.com/honest-code/Cart-checkout-BDD.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rai22474/dojoAtdd/issues"
+    "url": "https://github.com/honest-code/Cart-checkout-BDD.git/issues"
   },
-  "homepage": "https://github.com/rai22474/dojoAtdd#readme",
+  "homepage": "https://github.com/honest-code/Cart-checkout-BDD.git#readme",
   "dependencies": {
     "lodash": "4.13.1",
     "q": "1.4.1",
