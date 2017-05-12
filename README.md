@@ -2,7 +2,7 @@
 
 ## Objetives
 
-A simple app with Acceptance tests to learn BDD and ATDD and connect with the service pro.HonestCode.io
+A simple NodeJS app with Acceptance tests written in Gherkin to be used with CucumberJS to learn BDD and ATDD and connect with the service pro.HonestCode.io
 
 
 ## System requisites
@@ -29,7 +29,7 @@ npm start
 
 ```
 
-After startin the server and from a different Terminal window run the Acceptance tests (for Unix or Windows):
+After starting the server and from a different Terminal window run the Acceptance tests (for Unix or Windows):
 
 ```
 
@@ -48,7 +48,7 @@ npm run test-acceptance-win-file
 
 ```
 
-After generating tests-result.json file, update your Blueprint WEBHOOK_API_KEY in package.json and send the results to pro.HonestCode.io:
+After generating tests-result.json file, update your HonestCode's Blueprint WEBHOOK_API_KEY in package.json and send the results to pro.HonestCode.io:
 
 ```
 npm run honestcode
