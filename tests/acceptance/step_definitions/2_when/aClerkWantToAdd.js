@@ -10,7 +10,7 @@ module.exports = function() {
          let checkoutResponse = world.getValue('checkoutCreationResponse');
          const options = {
             method: 'POST',
-            uri: checkoutResponse.headers.location + "/items",
+            uri: checkoutResponse.headers.location + '/items',
             json: {
                 product: product
             },
