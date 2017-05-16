@@ -1,14 +1,31 @@
 'use strict';
 
-const createCheckout = require('../../lib/service/createCheckout');
+const requestPromise = require('request-promise');
 
-module.exports = function () {
+module.exports = function() {
 
-    this.Given(/^an existing checkout with code "([^"]*)"$/, function (code) {
+    this.Given(/^an existing checkout with code "([^"]*)"$/, function (code, done) {
+        const world = this;
+        const options = {
+            method: 'POST',
+            uri: 'http://localhost:3000/api/checkouts',
+            json: {
+                code: code
+            },
+            resolveWithFullResponse: true
+        };
 
-        return createCheckout(code)
-            .then(response => {
+        requestPromise(options)
+            .then(function (response) {
                 response.statusCode.should.equal(201);
+                response.headers.location.should.be.equal('http://localhost:3000/api/checkouts/' + code);
+
+                world.publishValue('checkoutCreationResponse', response);
+
+                done();
+            })
+            .catch(function (err) {
+                done(err);
             });
     });
 
