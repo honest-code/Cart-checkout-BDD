@@ -26,6 +26,8 @@ test_job:
 acceptance_job:
   stage: acceptance
   script:
+    - apt-get -y update && apt-get -y upgrade
+    - apt-get -y install screen
     - git clone $REPO_URL
     - cd Cart-checkout-BDD 
     - npm install
@@ -35,7 +37,7 @@ acceptance_job:
     - npm run test-acceptance
     - npm run test-acceptance-file
   after_script:
-    - npm run honestcode
+    - cd Cart-checkout-BDD && npm run honestcode
   cache:
     paths:
     - node_modules/
