@@ -7,7 +7,7 @@ Feature: Create new checkout
     I want retrieve the current state of the checkout
 
   Scenario: Retrieve a non existing checkout
-    When a supermarket clerk queries the checkout "2" current state
+    When a supermarket clerk queries the checkout "3" current state
     Then the checkout won't be found
 
   Scenario: Retrieve an existing checkout
