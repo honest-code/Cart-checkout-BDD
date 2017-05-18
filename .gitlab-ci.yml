@@ -37,7 +37,8 @@ acceptance_job:
     - npm run test-acceptance
     - npm run test-acceptance-file
   after_script:
-    - cd Cart-checkout-BDD && honestcode r1g4cUB7gWSkWNcUSXlbHyMV ./tests_result.json
+    - cd Cart-checkout-BDD && curl -XPOST --data-binary @./tests_result.json \
+            https://pro.honestcode.io/api/hooks/tr/r1g4cUB7gWSkWNcUSXlbHyMV -v -s
 
   cache:
     paths:
