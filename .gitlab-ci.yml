@@ -1,16 +1,40 @@
 stages:
   - test
+  - acceptance
 
-test_job:
+acceptance_job:
   stage: test
-  image: node:6.3.1
+  image: node:4.4.5
   script:
     - npm install
     - npm update
     - npm prune
-    - npm test
+    - npm run test
+    - npm run jshint
   cache:
     paths:
     - node_modules/
   only:
     - master
+
+acceptance_job:
+  stage: acceptance
+  image: node:4.4.5
+  script:
+    - npm install
+    - npm update
+    - npm prune
+    - screen -d -m -L npm start
+    - npm run test-acceptance
+    - npm run test-acceptance-file
+  after_script:
+    - npm run honestcode
+  cache:
+    paths:
+    - node_modules/
+  only:
+    - master
+
+
+
+
