@@ -26,7 +26,7 @@ test_job:
 acceptance_job:
   stage: acceptance
   script:
-    - apt-get -y update && apt-get -y upgrade
+    - apt-get -y update
     - apt-get -y install screen
     - git clone $REPO_URL
     - cd Cart-checkout-BDD 
