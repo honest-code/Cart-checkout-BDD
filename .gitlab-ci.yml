@@ -37,7 +37,8 @@ acceptance_job:
     - npm run test-acceptance
     - npm run test-acceptance-file
   after_script:
-    - cd Cart-checkout-BDD && npm run honestcode
+    - cd Cart-checkout-BDD && honestcode r1g4cUB7gWSkWNcUSXlbHyMV ./tests_result.json
+
   cache:
     paths:
     - node_modules/
