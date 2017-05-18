@@ -13,4 +13,4 @@ Feature: Add item to a checkout
     And a clerk want to add "Sal"
     Then the checkout has "6.66 EUR" in the total value
     And a clerk want to add "Sal"
-    And the checkout has "8.09 EUR" in the total value
+    And the checkout has "8.091 EUR" in the total value
