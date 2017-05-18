@@ -2,12 +2,17 @@ stages:
   - test
   - acceptance
 
+image: node:4.4.5
+
+variables: 
+  REPO_URL: https://github.com/honest-code/Cart-checkout-BDD.git
+
 test_job:
   stage: test
-  image: node:4.4.5
   script:
-    - git clone https://github.com/honest-code/Cart-checkout-BDD.git
-    - cd Cart-checkout-BDD && npm install
+    - git clone $REPO_URL
+    - cd Cart-checkout-BDD 
+    - npm install
     - npm update
     - npm prune
     - npm run test
@@ -20,8 +25,9 @@ test_job:
 
 acceptance_job:
   stage: acceptance
-  image: node:4.4.5
   script:
+    - git clone $REPO_URL
+    - cd Cart-checkout-BDD 
     - npm install
     - npm update
     - npm prune
