@@ -6,6 +6,7 @@ test_job:
   stage: test
   image: node:4.4.5
   script:
+    - mkdir ~/.ssh/
     - ssh-keyscan -H github.com >> ~/.ssh/known_hosts
     - git clone git@github.com:honest-code/Cart-checkout-BDD.git
     - cd Cart-checkout-BDD && npm install
