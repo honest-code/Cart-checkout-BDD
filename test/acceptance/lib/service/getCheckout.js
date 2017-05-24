@@ -1,13 +1,13 @@
 'use strict';
 
-const request = require('request-promise'),
-    baseUri = require('./baseUri');
+const request = require('request-promise');
+const baseUri = require('./baseUri');
 
 module.exports = code => {
 
     const options = {
         method: 'GET',
-        uri: baseUri + '/api/checkouts/' + code,
+        uri: `${baseUri}/api/checkouts/${code}`,
         json: true,
         resolveWithFullResponse: true,
         simple: false

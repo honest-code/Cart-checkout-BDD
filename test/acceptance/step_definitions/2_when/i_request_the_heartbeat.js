@@ -15,7 +15,7 @@ module.exports = function() {
 
         requestPromise(options)
             .then(function(response) {
-                world.publishValue('heartbeatResponse', response);
+                world.publishValue('lastResponse', response);
                 done();
             })
             .catch(function(err) {

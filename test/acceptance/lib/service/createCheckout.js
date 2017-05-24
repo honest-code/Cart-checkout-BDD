@@ -7,7 +7,7 @@ module.exports = code => {
 
     const options = {
         method: 'POST',
-        uri: baseUri + '/api/checkouts',
+        uri: `${baseUri}/api/checkouts`,
         json: {
             code: code
         },

@@ -4,8 +4,8 @@ const checkouts = require('../domain/checkouts');
 
 module.exports = function(req, res, next) {
     let id = req.params.checkoutId;
-    let itemName = req.params.itemName;
-    let checkout = checkouts.addItem(id, itemName);
+    let promotion = req.params.promotion;
+    let checkout = checkouts.addPromotion(id, promotion);
     if (checkout === undefined) {
         res.send(404);
     } else {
