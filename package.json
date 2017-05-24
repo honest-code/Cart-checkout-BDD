@@ -42,12 +42,12 @@
     "start": "node --harmony src/index.js",
     "test": "grunt mochacli",
     "jshint": "grunt jshint",
-    "test-acceptance": "node --harmony node_modules/.bin/cucumber-js tests/acceptance/features -r tests/acceptance/step_definitions -f pretty",
-    "test-acceptance-only": "node --harmony node_modules/.bin/cucumber-js tests/acceptance/features -r tests/acceptance/step_definitions --tags @only -f pretty",
-    "test-acceptance-file": "./node_modules/.bin/cucumber-js tests/acceptance/features -r ./tests/acceptance/step_definitions --format json:tests_result.json",
-    "test-acceptance-win": "node_modules/.bin/cucumber-js tests/acceptance/features -r tests/acceptance/step_definitions -f pretty",
-    "test-acceptance-win-only": "node_modules/.bin/cucumber-js tests/acceptance/features -r tests/acceptance/step_definitions --tags @only -f pretty",
-    "test-acceptance-win-file": "node_modules/.bin/cucumber-js tests/acceptance/features -r tests/acceptance/step_definitions --format json:tests_result.json",
-    "honestcode": "honestcode WEBHOOK_API_KEY ./tests_result.json"
+    "test-acceptance": "node --harmony node_modules/.bin/cucumber-js test/acceptance/features -r test/acceptance/step_definitions -f pretty",
+    "test-acceptance-only": "node --harmony node_modules/.bin/cucumber-js test/acceptance/features -r test/acceptance/step_definitions --tags @only -f pretty",
+    "test-acceptance-file": "./node_modules/.bin/cucumber-js test/acceptance/features -r ./test/acceptance/step_definitions --format json:test_result.json",
+    "test-acceptance-win": "node_modules/.bin/cucumber-js test/acceptance/features -r test/acceptance/step_definitions -f pretty",
+    "test-acceptance-win-only": "node_modules/.bin/cucumber-js test/acceptance/features -r test/acceptance/step_definitions --tags @only -f pretty",
+    "test-acceptance-win-file": "node_modules/.bin/cucumber-js test/acceptance/features -r test/acceptance/step_definitions --format json:test_result.json",
+    "honestcode": "honestcode WEBHOOK_API_KEY ./test_result.json"
   }
 }
