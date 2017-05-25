@@ -1,4 +1,3 @@
-@only
 Feature: Create new checkout
     In order to know which is the total of a checkout
     As a clerk

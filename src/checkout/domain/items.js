@@ -1,9 +1,9 @@
 'use strict';
 
 let list = [
-    {name: 'Sal', price: 1.43},
-    {name: 'Aceite', price: 5.23},
-    {name: 'Vino', price: 10}
+    {name: "Sal 0.5", price: 0.5},
+    {name: "Aceite 3", price: 3},
+    {name: "Vino 10", price: 10}
 ];
 const map = {};
 list.forEach((item, index) => {
