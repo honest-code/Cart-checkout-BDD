@@ -26,6 +26,7 @@ function clear() {
 
 function addItem(id, itemName){
     const item = items.get(itemName);
+
     let checkout = checkoutMap[id];
     if(checkout && item){
         const itemInCout = checkout.list.find(item => item.name === itemName);
@@ -36,6 +37,9 @@ function addItem(id, itemName){
         }
         checkout.total += item.price;
         checkout = applyPromotions(checkout);
+
+
+
     }
     return checkout;
 }

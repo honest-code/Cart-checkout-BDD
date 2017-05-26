@@ -7,7 +7,7 @@ Feature: Promotions
 
   Scenario: Add item with promotion code
     Given a new checkout with code "1"
-    And the product "Vino" price is "10"
+    And the product "Vino" price is 10
     When I add a product with name "Vino"
     And I add a product with name "Vino"
     And I add a product with name "Vino"
@@ -16,16 +16,16 @@ Feature: Promotions
 
   Scenario: Add item without promotion code
     Given a new checkout with code "1"
-    And the product "Vino" price is "10"
-    And the product "Aceite" price is "3"
+    And the product "Vino" price is 10
+    And the product "Aceite" price is 3
     When I add a product with name "Vino"
     And I add a product with name "Aceite"
     Then the checkout has "13 EUR" in the total value
 
   Scenario: Add item without promotion code
     Given a new checkout with code "1"
-    And the product "Vino" price is "10"
-    And the product "Aceite" price is "3"
+    And the product "Vino" price is 10
+    And the product "Aceite" price is 3
     When I add a product with name "Vino"
     And I add a product with name "Aceite"
     And I add a product with name "Vino"

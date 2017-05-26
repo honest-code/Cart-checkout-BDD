@@ -7,7 +7,6 @@
     "eqeqeq": true,
     "eqnull": false,
     "esnext": true,
-    "esversion": 6,
     "evil": false,
     "forin": true,
     "immed": true,
