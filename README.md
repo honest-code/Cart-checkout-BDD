@@ -32,7 +32,6 @@ npm start
 After starting the server and from a different Terminal window run the Acceptance tests (for Unix or Windows):
 
 ```
-
 npm run test-acceptance
 npm run test-acceptance-win
 
@@ -48,9 +47,19 @@ npm run test-acceptance-win-file
 
 ```
 
-After generating tests-result.json file, update your HonestCode's Blueprint WEBHOOK_API_KEY in package.json and send the results to pro.HonestCode.io:
+Visit pro.HonestCode.io
 
 ```
+Log in
+Create a team
+Create a Product
+Create a Blueprint
+```
+
+
+After generating tests-result.json file, update your HonestCode's Blueprint WEBHOOK_API_KEY in package.json and send the results to pro.HonestCode.io with:
+```
+
 npm run honestcode
 
 ```
