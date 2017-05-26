@@ -6,13 +6,13 @@ Feature: Create new checkout
     As a clerk
     I want retrieve the current state of the checkout
 
-  Scenario: Create a new empty checkout
-    Given a new checkout with code "1"
-    Then the checkout has "0 EUR" in the total value
-
   Scenario: Retrieve a non existing checkout
     When I queries the checkout "2" current state
     Then the checkout should not exist
+
+  Scenario: Create a new empty checkout
+    Given a new checkout with code "1"
+    Then the checkout has "0 EUR" in the total value
 
   Scenario: Retrieve an existing checkout
     Given a new checkout with code "1"
