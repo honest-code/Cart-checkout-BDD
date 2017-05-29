@@ -34,7 +34,6 @@ acceptance_job:
     - npm update
     - npm prune
     - screen -d -m -L npm start
-    - npm run test-acceptance
     - npm run test-acceptance-file
   after_script:
     - cd Cart-checkout-BDD && curl -XPOST --data-binary @./tests_result.json "https://pro.honestcode.io/api/hooks/tr/r1g4cUB7gWSkWNcUSXlbHyMV" -v -s
