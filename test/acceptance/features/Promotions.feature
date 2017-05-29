@@ -23,4 +23,4 @@ Feature: Promotions
     And I add a product with name "Aceite"
     And I add a product with name "Vino"
     And I add a product with name "Vino"
-    Then the checkout has "31 EUR" in the total value
+    Then the checkout has "32 EUR" in the total value
