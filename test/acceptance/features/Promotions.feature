@@ -19,8 +19,7 @@ Feature: Promotions
     Given a new checkout with code "1"
     And the product "Vino" price is 10
     And the product "Aceite" price is 3
-    When I add a product with name "Vino"
-    And I add a product with name "Aceite"
+    When I add a product with name "Aceite"
     And I add a product with name "Vino"
     And I add a product with name "Vino"
-    Then the checkout has "32 EUR" in the total value
+    Then the checkout has "23 EUR" in the total value
