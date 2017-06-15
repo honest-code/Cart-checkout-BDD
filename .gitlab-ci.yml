@@ -47,12 +47,7 @@ acceptance_job:
 publish_job:
   stage: publish
   script:
-    - cd Cart-checkout-BDD 
-  cache:
-    paths:
-    - node_modules/
-  only:
-    - master
+    - echo "Published"
 
 
 
