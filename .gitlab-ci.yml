@@ -45,7 +45,7 @@ acceptance_job:
     
 publish_job:
   stage: publish
-    script:
+  script:
     - cd Cart-checkout-BDD 
   cache:
     paths:
