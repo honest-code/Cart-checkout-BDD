@@ -1,3 +1,5 @@
+[![HonestCode](https://pro.honestcode.io/api/blueprint/bp.HkNcISmx-/badge.svg)](https://pro.honestcode.io/#/blueprint/edit/bp.HkNcISmx-)
+
 # Cart - Checkout
 
 ## Objetives
