@@ -14,7 +14,7 @@ Feature: Promotions
     And I add a product with name "Vino"
     And I add a product with name "Vino"
     And I add a promotion with code "2x1"
-    Then the checkout has "30 EUR" in the total value
+    Then the checkout has "50 EUR" in the total value
 
   Scenario: Add item without promotion code
     Given a new checkout with code "1"
