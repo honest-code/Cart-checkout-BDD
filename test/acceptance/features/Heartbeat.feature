@@ -6,5 +6,5 @@ Feature: Heartbeat
   I want to know the server status
 
   Scenario: Get Heartbeat
-    When I request the heartbeat
+    When I request the heartbeatffff
     Then the response code is 200
