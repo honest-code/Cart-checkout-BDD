@@ -8,8 +8,6 @@ Feature: Add item to a checkout
 
   Scenario: Add item to an empty checkout
     Given a new checkout with code "1"
-    And the product "Aceite" price is 3
-    And the product "Sal" price is 1
     When I add a product with name "Aceite"
     And I add a product with name "Sal"
-    Then the checkout has "4 EUR" in the total value
+    Then the checkout has "6.66 EUR" in the total value
