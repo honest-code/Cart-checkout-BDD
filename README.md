@@ -40,7 +40,7 @@ npm run test-acceptance-win
 ```
 
 
-Generate the Acceptance test results report (for Unix or Windows):
+With the server running a report can also been generated with Acceptance test results (for Unix or Windows):
 
 ```
 
