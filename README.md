@@ -2,9 +2,16 @@
 
 # Cart - Checkout
 
+
 ## Objetives
 
 A simple NodeJS app with Acceptance tests written in Gherkin to be used with CucumberJS to learn BDD and ATDD and connect with the service pro.HonestCode.io
+
+Repository at:
+https://github.com/honest-code/Cart-checkout-BDD
+
+There is just a CI pipeline Gitlab project at:
+https://gitlab.intelygenz.com/HonestCode.io/Cart-checkout-BDD
 
 
 ## System requisites
@@ -80,7 +87,3 @@ To check code quality:
 npm run jshint
 
 ```
-
-
-
-

@@ -1,0 +1,54 @@
+stages:
+  - test
+  - acceptance
+  - publish
+
+image: node:4.4.5
+
+variables: 
+  REPO_URL: https://github.com/honest-code/Cart-checkout-BDD.git
+
+test_job:
+  stage: test
+  script:
+    - git clone $REPO_URL
+    - cd Cart-checkout-BDD 
+    - npm install
+    - npm update
+    - npm prune
+    - npm run test
+    - npm run jshint
+  cache:
+    paths:
+    - node_modules/
+  only:
+    - master
+
+acceptance_job:
+  stage: acceptance
+  script:
+    - apt-get -y update
+    - apt-get -y install screen
+    - git clone $REPO_URL
+    - cd Cart-checkout-BDD 
+    - npm install
+    - npm update
+    - npm prune
+    - screen -d -m -L npm start
+    - npm run test-acceptance-file
+  after_script:
+    - cd Cart-checkout-BDD && curl -XPOST --data-binary @./tests_result.json "https://pro.honestcode.io/api/hooks/tr/r1g4cUB7gWSkWNcUSXlbHyMV" -v -s
+  cache:
+    paths:
+    - node_modules/
+  only:
+    - master
+    
+publish_job:
+  stage: publish
+  script:
+    - echo "Published"
+
+
+
+
