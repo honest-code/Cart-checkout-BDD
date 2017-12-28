@@ -5,6 +5,7 @@ const promotions = require('./promotions').promotions;
 
 let checkoutMap = {};
 
+
 function create(id) {
     checkoutMap[id] = {
         list: [],
