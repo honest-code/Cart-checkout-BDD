@@ -5,6 +5,15 @@ Feature: Promotions
         As a client application
     I want to know the server status
 
+  Scenario: Add items without promotion code
+    Given a new checkout with code "1"
+    And the product "Vino" price is 12
+    And the product "Aceite" price is 3
+    When I add a product with name "Aceite"
+    And I add a product with name "Vino"
+    And I add a product with name "Vino"
+    Then the checkout has "27 EUR" in the total value
+
   Scenario: Add items with promotion code
     Given a new checkout with code "1"
     And the product "Vino" price is 10
@@ -14,12 +23,3 @@ Feature: Promotions
     And I add a product with name "Vino"
     And I add a product with name "Vino"
     Then the checkout has "20 EUR" in the total value
-
-  Scenario: Add items without promotion code
-    Given a new checkout with code "1"
-    And the product "Vino" price is 12
-    And the product "Aceite" price is 3
-    When I add a product with name "Aceite"
-    And I add a product with name "Vino"
-    And I add a product with name "Vino"
-    Then the checkout has "27 EUR" in the total value
