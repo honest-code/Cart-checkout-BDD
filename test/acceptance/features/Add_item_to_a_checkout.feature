@@ -6,7 +6,7 @@ Feature: Add item to a checkout
   As a clerk
   I want to add new item so the total checkout is updated
 
-  Scenario: Add item to an empty checkout 1
+  Scenario: Add item to an empty checkout
     Given a new checkout with code "1"
     And the product "Aceite" price is 5
     And the product "Sal" price is 10
