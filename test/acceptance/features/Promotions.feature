@@ -17,8 +17,8 @@ Feature: Promotions
   Scenario: Add items without promotion code
     Given a new checkout with code "1"
     And the product "Vino" price is 12
-    And the product "Aceite" price is 3
+    And the product "Aceite" price is 6
     When I add a product with name "Aceite"
     And I add a product with name "Vino"
     And I add a product with name "Vino"
-    Then the checkout has "27 EUR" in the total value
+    Then the checkout has "30 EUR" in the total value
