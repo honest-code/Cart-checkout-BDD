@@ -9,9 +9,9 @@ Feature: Special offers
     Given a new checkout with code "1"
     And the product "Vino" price is 10
     And the product "Aceite" price is 6
-    When I add a product with name "Vino"
+    When I add a product with name "Aceite"
     And I add a product with name "Vino"
-    And I add a product with name "Aceite"
+    And I add a product with name "Vino"
     And I add a promotion with code "2x1"
     Then the checkout has "16 EUR" in the total value
 
