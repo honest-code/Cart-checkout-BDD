@@ -11,8 +11,8 @@ Feature: Special offers
     And the product "Aceite" price is 6
     When I add a product with name "Vino"
     And I add a product with name "Vino"
-    And I add a promotion with code "2x1"
     And I add a product with name "Aceite"
+    And I add a promotion with code "2x1"
     Then the checkout has "16 EUR" in the total value
 
   Scenario: Add items without promotion code
