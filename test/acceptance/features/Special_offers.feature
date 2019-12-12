@@ -8,12 +8,11 @@ Feature: Special offers
   Scenario: Add items with promotion code 2x1
     Given a new checkout with code "1"
     And the product "Vino" price is 10
-    And the product "Aceite" price is 6
-    When I add a product with name "Aceite"
+    When I add a product with name "Vino"
     And I add a product with name "Vino"
     And I add a product with name "Vino"
     And I add a promotion with code "2x1"
-    Then the checkout has "16 EUR" in the total value
+    Then the checkout has "20 EUR" in the total value
 
   Scenario: Add items without promotion code
     Given a new checkout with code "1"
